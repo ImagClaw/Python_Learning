@@ -58,8 +58,6 @@ class ATM(EasyFrame):
     def login(self):
         """Attempts to login the customer.  If successful,
         enables the buttons, including logout."""
-        print(self.untilLockout)
-
         if self.untilLockout != 0:
             name = self.nameField.getText()
             pin = self.pinField.getText()
