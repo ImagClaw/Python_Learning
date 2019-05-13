@@ -33,14 +33,10 @@ class Account:
 
     def getBalance(self):
     	return self.__balance
-
-class Atm(Account):
-    def __init__(self, id):
-        super().__init__()
-        self.__id = id
+        
     def mainMenu(self):
         return "Main menu \n1: Check balance \n2: Withdraw \n3: Deposit \n4: Exit"
-
+    
 
 def main():
     for i in range (10):
@@ -52,7 +48,7 @@ def main():
         print("Account doesn't exist")
         return 0
 
-    newatm = Atm(idInput)
+    newatm = Account(idInput)
     while True:
         print(newatm.mainMenu())
         choiceInput = int(input("Enter a choice: " ))
