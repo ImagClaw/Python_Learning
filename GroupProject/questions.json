@@ -1,0 +1,94 @@
+{
+    "questions": [
+        {
+            "question": "Who is the president of the United States (2019)?",
+            "incorrect_answers": [
+                "Barak Obama",
+                "Bill Clinton",
+                "George Bush"
+            ],
+            "correct_answer": "Donald Trump"
+        },
+        {
+            "question": "What is the largest ocean in the world?",
+            "incorrect_answers":[
+                "Atlantic Ocean",
+                "Artic Ocean",
+                "Indian Ocean"
+            ],
+            "correct_answer": "Pacific Ocean"
+        },
+        {
+            "question": "Where did the Olympic Games originate?",
+            "incorrect_answers":[
+                "Egypt",
+                "India",
+                "Peru"
+            ],
+            "correct_answer": "Greece"
+        },
+        {
+            "question": "What is the coloured part of the human eye called?",
+            "incorrect_answers":[
+                "The cornea",
+                "The cone",
+                "The retina"
+            ],
+            "correct_answer": "The iris"
+        },
+        {
+            "question": "In which year was Alaska sold to the U.S.?",
+            "incorrect_answers":[
+                "1947",
+                "1895",
+                "1911"
+            ],
+            "correct_answer": "1867"
+        }, 
+        {
+            "question": "What is the diameter of Earth?",
+            "incorrect_answers":[
+                "2000 miles",
+                "9000 miles",
+                "6000 miles"
+            ],
+            "correct_answer": "8000 miles"
+        },
+        {
+            "question": "How many chambers does the human heart have?",
+            "incorrect_answers":[
+                "6",
+                "2",
+                "5"
+            ],
+            "correct_answer": "4"
+        },
+        {
+            "question": "In which country Bagels originate?",
+            "incorrect_answers":[
+                "England",
+                "Italy",
+                "India"
+            ],
+            "correct_answer": "Poland"
+        },
+        {
+            "question": "How many balls are on a pool table at the start of a game?",
+            "incorrect_answers":[
+                "8",
+                "5",
+                "10"
+            ],
+            "correct_answer": "16"
+        },
+        {
+            "question": "When united states was founded?",
+            "incorrect_answers":[
+                "1720",
+                "1790",
+                "1735"
+            ],
+            "correct_answer": "1776"
+        }
+    ]
+}
