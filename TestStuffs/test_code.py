@@ -7,12 +7,9 @@ from test_module import ERROR_NOT_FOUND, ERROR_INVALID
 #of the .txt files as the value
 def FileDict(dir):
     fileDict = {}
-    for (rootpath, _, filename) in os.walk(dir):
-        for files in filename:
-            print(rootpath)
-            if files.endswith(".txt"):
-                print(files)
-
+    for root, _, files in os.walk(dir):
+        txts = [f for f in files if f.endswith('.txt')]
+        fileDict[root] = txts
     return fileDict
 
 #Given a string, find all occurrences of badLtr and replace them with goodLtr. If you cannot find any
