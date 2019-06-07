@@ -9,22 +9,8 @@ def main():
     HOST = "10.128.102.115"
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)    
     s.connect((HOST, PORT))
-
-    
-
-    data2 = s.recv(1024)
-
-    print(data2.decode())
-    data = s.sendall(keys[1].encode())
-
-    if data2.decode() == "Unrecognized command.":
-        print("nope")
-    
-    print(data)
-
-
-    received = s.recv(1024)
-    print("Encoded data received:", received)
+    received = s.recv(4096)
+    print("Encoded data received: {}\n\n".format(received.decode()))
 
     # receives data and splits it every 2 chars.
     data = received.decode('utf-8')
@@ -46,6 +32,9 @@ def main():
             for x in y:
                 keyConv.append(ord(x))
         
+        # XOR decimal representation of each char in key and msg
+        # if key is shorter than msg, count + 1.  If count >= to 
+        # key, set count back to 0
         for i in msgConv:
             key = keyConv[count]
             text.append(chr(i^key))
@@ -55,12 +44,12 @@ def main():
 
         returnMsg.append(''.join(text))
 
-        
+    # A while loop to iterate through each converted message
+    # Each msg is sent to the server to elicit a response
     z = 0
     while z < len(returnMsg):
-        print(returnMsg[z])
-        s.sendall(str(returnMsg[z]).encode())
-        data = s.recv(1024)
+        s.sendall(str(returnMsg[z]+'\n').encode())
+        data = s.recv(4096)
         print(data.decode())
         z += 1
     
