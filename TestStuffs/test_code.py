@@ -10,7 +10,17 @@ def FileDict(dir):
     for root, _, files in os.walk(dir):
         txts = [f for f in files if f.endswith('.txt')]
         fileDict[root] = txts
+    
+
+# Convert path to Windows-style
+    #tempDict = {}
+    #for dir in fileDict.iterkeys():
+    #    windowsed = dir.replace('/', '\\')
+    #    tempDict[windowsed] = fileDict[dir]
+    #fileDict = tempDict
+    
     return fileDict
+
 
 #Given a string, find all occurrences of badLtr and replace them with goodLtr. If you cannot find any
 #of badLtr, return ERROR_NOT_FOUND. If an invalid string is passed in, return ERROR_INVALID
